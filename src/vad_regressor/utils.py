@@ -1,6 +1,5 @@
-from vad_regressor import pd, plt, sns, np, ttest_ind, RobertaTokenizer, RobertaModel, ModelCheckpoint
-from vad_regressor.config import *
-
+from src.vad_regressor import pd, plt, os, np, ttest_ind, RobertaTokenizer, RobertaModel, ModelCheckpoint
+from src.vad_regressor.config import *
 
 def plot_vads(f, labels, preds, save=False, path=None):
     fig, axes = plt.subplots(1, 3)

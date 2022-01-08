@@ -1,10 +1,12 @@
-from src import pd, plt, np
+from src import pd, plt, np, os
 from src.config import *
-from vad_regressor.config import *
-from news.utils import *
+from src.vad_regressor.config import *
+from src.news.utils import *
+
 
 # Clean data
-df = pd.read_csv(DATA_PATH)
+abcnews_path = os.path.join(TxMM_PATH, 'abcnews-date-text.csv')
+df = pd.read_csv(abcnews_path)
 df['publish_date'] = pd.to_datetime(df['publish_date'], format='%Y%m%d')
 
 # Compute headline length
@@ -12,6 +14,4 @@ df['length'] = df.headline_text.str.split().str.len()
 
 # Apply VAD regressor on all data
 df[VAD_COLUMNS] = df.headline_text.apply(predict_vad)
-
-plt.plot(np.arange(df.shape[0]), df['V'])
-plt.show()
+df.to_csv('vad_preds.csv')

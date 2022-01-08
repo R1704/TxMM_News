@@ -1,21 +1,21 @@
-from vad_regressor.config import *
-from vad_regressor.utils import *
+from src import os, pd, np, plt, sns, pl, torch
 
-import os
-import torch
-import pandas as pd
-import matplotlib.pyplot as plt
+# ML
 from torch.utils.data import Dataset, DataLoader
-import numpy as np
-import pytorch_lightning as pl
-from tqdm.auto import tqdm
-import seaborn as sns
 import torch.nn as nn
 from transformers import AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel
 from pytorch_lightning.callbacks import EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
-from scipy.stats import ttest_ind
 from pytorch_lightning.callbacks import ModelCheckpoint
+
+# Progressbar
+from tqdm.auto import tqdm
+
+# Statistics
+from scipy.stats import ttest_ind
+
+from src.vad_regressor.config import *
+from src.vad_regressor.utils import *
 
 total_df = pd.read_csv(f'{EMO_PATH}emobank.csv', index_col=0)
 dataframes = {group: df for group, df in total_df.groupby('split')}

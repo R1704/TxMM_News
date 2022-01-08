@@ -1,5 +1,5 @@
-from vad_regressor import torch, pd, Dataset
-from vad_regressor.config import *
+from src.vad_regressor import torch, pd, Dataset
+from src.vad_regressor.config import *
 
 
 class VADDataset(Dataset):

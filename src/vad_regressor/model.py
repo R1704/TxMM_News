@@ -1,6 +1,6 @@
-from vad_regressor import pl, nn, AdamW, get_linear_schedule_with_warmup
-from vad_regressor.config import *
-from vad_regressor.utils import get_model
+from src.vad_regressor import pl, nn, AdamW, get_linear_schedule_with_warmup
+from src.vad_regressor.config import *
+from src.vad_regressor.utils import get_model
 
 
 class Regressor(pl.LightningModule):

@@ -1,5 +1,6 @@
 from src import device, tokenizer, trained_model, pd, plt
-from vad_regressor.config import *
+from src.vad_regressor.config import *
+
 
 def tokenize_sentence(sentence, tokenizer, max_tokens):
     """

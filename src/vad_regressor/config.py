@@ -1,3 +1,4 @@
+from src.vad_regressor import os
 from src.config import *
 
 

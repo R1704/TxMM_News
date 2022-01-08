@@ -1,5 +1,5 @@
-from vad_regressor import pl, DataLoader
-from vad_regressor.config import *
+from src.vad_regressor import pl, DataLoader
+from src.vad_regressor.config import *
 from dataset import VADDataset
 
 

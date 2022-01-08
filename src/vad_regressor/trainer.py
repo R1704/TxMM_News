@@ -1,9 +1,9 @@
 # Imports
-from vad_regressor import os, pl, TensorBoardLogger, EarlyStopping
+from src.vad_regressor import os, pl, TensorBoardLogger, EarlyStopping
 from module import VADModule
 from model import Regressor
-from vad_regressor import dataframes
-from vad_regressor.utils import *
+from src.vad_regressor import dataframes
+from src.vad_regressor.utils import *
 
 
 # Tokenizer

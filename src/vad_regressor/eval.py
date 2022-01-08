@@ -1,6 +1,6 @@
-from vad_regressor import os, pd, np, pl, torch, tqdm, sns, dataframes
-from vad_regressor.utils import *
-from vad_regressor.config import *
+from src.vad_regressor import os, pd, np, pl, torch, tqdm, sns, dataframes
+from src.vad_regressor.utils import *
+from src.vad_regressor.config import *
 from src import device, gpus
 from dataset import VADDataset
 from model import Regressor

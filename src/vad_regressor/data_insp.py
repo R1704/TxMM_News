@@ -1,6 +1,6 @@
-from vad_regressor import total_df, pd, plt
-from vad_regressor.config import *
-from vad_regressor.utils import *
+from src.vad_regressor import total_df, pd, plt
+from src.vad_regressor.config import *
+from src.vad_regressor.utils import *
 
 # Find out how many tokens are mostly used
 # tokenizer = RobertaTokenizer.from_pretrained(MODEL_NAME)
